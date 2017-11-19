@@ -23,7 +23,7 @@ import java.util.concurrent.ExecutionException;
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private Button button;
-    private Bitmap bitmap = null;
+    private Bitmap bitmap = null; 
 
     private DownloadTask loadPic;
     private Handler mHandler;
