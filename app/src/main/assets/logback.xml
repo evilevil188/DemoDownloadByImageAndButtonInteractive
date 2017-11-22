@@ -1,0 +1,56 @@
+<configuration debug='false'>
+    <property name="VIP_FILES_DIR" value="${EXT_DIR:-/sdcard}/VIP/LOG" />
+    <property name="UPLOAD_FILES_DIR" value="${EXT_DIR:-/sdcard}/VIP" />
+<!--
+<appender name="VIP_STDOUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${VIP_FILES_DIR}/vip.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d %-5level \(%c{0}:%line\) - %m %n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>vip.log.%i</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>100</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>5MB</maxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+
+
+    <appender name="TaianUpload" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${UPLOAD_FILES_DIR}/upload.txt</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d - %m %n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>upload.txt.%i</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>100</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>5MB</maxFileSize>
+        </triggeringPolicy>
+    </appender>
+-->
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d %-5level \(%c{0}:%line\) - %m %n</pattern>
+        </encoder>
+    </appender>
+<!--
+<logger name="upload" >
+        <appender-ref ref="TaianUpload" />
+    </logger>
+-->
+
+    <root level="debug">
+        <!--<appender-ref ref="VIP_STDOUT" />-->
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

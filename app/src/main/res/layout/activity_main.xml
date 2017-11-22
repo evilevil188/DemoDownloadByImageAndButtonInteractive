@@ -4,52 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demoapp.keane.demodownloadbyimageandbuttoninteractive.MainActivity"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:context="com.demoapp.keane.braintraningbygrassimage.MainActivity">
 
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
-        android:layout_marginTop="96dp"
-
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="145dp"
+        android:layout_height="154dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@mipmap/ic_launcher"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.294" />
+        android:layout_marginTop="31dp"
+        app:layout_constraintHorizontal_bias="0.503"
+        tools:layout_editor_absoluteY="80dp"
+        tools:layout_editor_absoluteX="134dp" />
 
-        <ImageView
+    <GridLayout
+        android:layout_width="375dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginRight="104dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintVertical_bias="0.395" />
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:onClick="sendAnd"
+            android:tag="0"
+            android:text="Button0"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/button"
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:onClick="sendAnd"
+            android:tag="1"
+            android:text="Button1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:onClick="sendAnd"
+            android:tag="2"
+            android:text="Button2"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:onClick="sendAnd"
+            android:tag="3"
+            android:text="Button3"
+            android:textSize="24sp" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/ansTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="164dp"
-        android:layout_marginTop="61dp"
-        android:onClick="startDownLoad"
-        android:text="Download"
+        android:layout_marginRight="130dp"
+        android:layout_marginTop="200dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 </android.support.constraint.ConstraintLayout>
